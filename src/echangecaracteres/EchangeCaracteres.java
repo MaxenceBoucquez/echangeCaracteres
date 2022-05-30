@@ -10,7 +10,7 @@ package echangecaracteres;
  */
 public class EchangeCaracteres {
 
-    static String WordToChange;
+    String WordToChange;
     
     EchangeCaracteres()
     {
@@ -22,11 +22,7 @@ public class EchangeCaracteres {
         this.WordToChange = WordToChange;
     }
     
-    public static void main(String[] args) {
-        WordToChange = "ANTICONSITUTIONNELLEMENT";
-        System.out.println(echangerMot());
-    }   
-    public static String echangerMot()
+    public String echangerMot()
     { 
         return new String(WordToChange.substring(0,WordToChange.length()-2)+WordToChange.charAt(WordToChange.length()-1)+WordToChange.charAt(WordToChange.length()-2));
     }
