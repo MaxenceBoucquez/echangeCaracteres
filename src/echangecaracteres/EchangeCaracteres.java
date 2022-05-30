@@ -10,21 +10,23 @@ package echangecaracteres;
  */
 public class EchangeCaracteres {
 
-    String WordToChange;
+    private String WordToChange;
     
-    EchangeCaracteres()
+    public EchangeCaracteres()
     {
         WordToChange = "";
     }
     
-    EchangeCaracteres(String WordToChange)
+    public EchangeCaracteres(String WordToChange)
     {
         this.WordToChange = WordToChange;
     }
     
-    public String echangerMot()
+    public String echange2DerniersCar()
     { 
-        return new String(WordToChange.substring(0,WordToChange.length()-2)+WordToChange.charAt(WordToChange.length()-1)+WordToChange.charAt(WordToChange.length()-2));
+        if (WordToChange.length() >= 2)
+            return new String(WordToChange.substring(0,WordToChange.length()-2)+WordToChange.charAt(WordToChange.length()-1)+WordToChange.charAt(WordToChange.length()-2));
+        return WordToChange;
     }
     
     
