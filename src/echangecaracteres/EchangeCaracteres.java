@@ -10,11 +10,26 @@ package echangecaracteres;
  */
 public class EchangeCaracteres {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    static String WordToChange;
+    
+    EchangeCaracteres()
+    {
+        WordToChange = "";
     }
+    
+    EchangeCaracteres(String WordToChange)
+    {
+        this.WordToChange = WordToChange;
+    }
+    
+    public static void main(String[] args) {
+        WordToChange = "ANTICONSITUTIONNELLEMENT";
+        System.out.println(echangerMot());
+    }   
+    public static String echangerMot()
+    { 
+        return new String(WordToChange.substring(0,WordToChange.length()-2)+WordToChange.charAt(WordToChange.length()-1)+WordToChange.charAt(WordToChange.length()-2));
+    }
+    
     
 }
